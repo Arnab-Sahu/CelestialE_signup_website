@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Terms{% endblock %}
+{% block content %}
+    <div class="add-pic">
+        <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-gray-100">
+        <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+            <div class="flex flex-row items-center justify-center gap-x-4 mb-4">
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-yellow-300 via-amber-500 to-orange-600">Terms</h1>
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">and </h1>
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-tl from-pink-300 via-indigo-700 to-purple-800">Conditions</h1>
+            </div>
+            <p class="text-xl text-center max-w-xl font-medium text-black mb-6">Welcome and thank you for your interest in joining our exclusive NFT marketplace community. By signing up early, you agree to the following terms and conditions</p>
+
+            <div class="w-full max-w-2xl mx-auto">
+                {% for item in terms %}
+                <div class="border border-zinc-800 rounded-2xl bg-zinc-900 overflow-hidden shadow-2xl shadow-black mb-8">
+                    <button class="accordion-button flex justify-between items-center w-full p-6 text-left transition-all duration-300 hover:bg-zinc-800/50">
+                        <span class="text-xl font-semibold text-white">{{ item.num }} {{ item.heading }}</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-zinc-900">
+                        <div class="px-6 pb-6 text-slate-400 border-t border-zinc-800/50 pt-4 font-medium leading-relaxed">
+                            {{ item.text }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".accordion-button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const panel = this.nextElementSibling;
+            const icon = this.querySelector('svg');
+
+            // 1. Toggle the icon rotation
+            icon.classList.toggle('rotate-180');
+
+            // 2. Toggle the panel height
+            if (panel.style.maxHeight) {
+                // If it's open, close it
+                panel.style.maxHeight = null;
+            } else {
+                // If it's closed, set height to exactly what the content needs
+                // Adding a little extra padding room if needed
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+
+            // Optional: Close other panels when one opens (Solo Accordion)
+            /*
+            buttons.forEach(otherBtn => {
+                if (otherBtn !== button) {
+                    otherBtn.nextElementSibling.style.maxHeight = null;
+                    otherBtn.querySelector('svg').classList.remove('rotate-180');
+                }
+            });
+            */
+        });
+    });
+});
+</script>
+{% endblock %}

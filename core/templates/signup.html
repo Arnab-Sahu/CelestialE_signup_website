@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %} Join Us{% endblock %}
+{% block content %}
+    <div class="add-pic">
+    <div class="flex flex-wrap flex-col items-center justify-content-center max-w-screen p-4 mx-auto backdrop-blur-2xl">
+        <div class="flex flex-wrap flex-row mt-64 max-w-xl mx-auto mb-20 items-center justify-items-center bg-transparent">
+            <form method="POST" action="{% url 'signup' %}" class="rounded-2xl shadow-2xl shadow-black bg-white px-2 py-5 flex flex-col items-center max-w-xl gap-10">
+                {% csrf_token %}
+                <div class="flex flex-row items-center justify-center gap-x-0 mb-4 backdrop-blue-2xl mx-3">
+                <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">Sig</h1>
+                    <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-yellow-300 via-amber-500 to-orange-600">nup</h1>
+                </div>
+                <div id="alert-container" class="flex flex-col gap-4">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert-item transition-all duration-700 bg-zinc-900 border border-white/10 text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-4 w-100 ">
+                                <div class="w-3 h-3 rounded-full {% if message.tags == 'success' %}bg-green-400 shadow-[0_0_10px_#4ade80]{% else %}bg-pink-500 shadow-[0_0_10px_#ec4899]{% endif %}"></div>
+                                <p class="text-sm font-medium">{{ message }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <label>
+                    <input class="rounded-full shadow-2xl shadow-black bg-zinc-900 py-3 px-8 outline-none focus:outline-none focus:border-none text-white font-medium placeholder-gray-600 mx-4" placeholder="Email Address" type="email" name="email" required>
+                </label>
+                <label>
+                    <input class="rounded-full shadow-2xl shadow-black bg-white py-3 px-8 outline-none focus:outline-none focus:border-none text-gray-900 font-medium placeholder-gray-500" placeholder="Username" type="text" name="username" required>
+                </label>
+                <label>
+                    <input type="checkbox" required>
+                    <a class="text-blue-500 mb-1.5">Accept the <a class="text-blue-500 hover:underline" href="{% url 'terms' %}">terms and conditions</a></a>
+                </label>
+                <button type="submit" class="px-5 py-1.5 font-medium bg-zinc-800 text-white shadow-zinc-800 hover:bg-slate-950 hover:shadow-slate-950 shadow-2xl rounded-full transition duration-500 mb-8">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const alerts = document.querySelectorAll('.alert-item');
+
+            // Only run if there are actual alerts
+            if (alerts.length > 0) {
+                alerts.forEach((alert, i) => {
+                    // Slide in
+                    setTimeout(() => {
+                        alert.classList.remove('opacity-100');
+                    }, i * 200);
+
+                    // Slide out and remove
+                    setTimeout(() => {
+                        alert.classList.add('opacity-100');
+                        setTimeout(() => alert.remove(), 700);
+                    }, 4000);
+                });
+            }
+        });
+    </script>
+{% endblock %}

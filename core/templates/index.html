@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{%  block title %} Home {% endblock %}
+{% block content %}
+    <div class="max-w-screen bg-white py-26">.</div>
+    <div class="flex flex-wrap items-center justify-content-center max-w-screen p-4 mx-auto">
+        <div class="text-center items-center justify-center mx-auto">
+            <h1 class="text-5xl font-bold tracking-tight text-balance text-black sm:text-7xl">Beyond Art, Beyond</h1>
+            <h1 class="text-5xl font-bold tracking-tight text-balance text-black sm:text-7xl">Imagination—</h1>
+            <h1 class="text-5xl font-bold tracking-tight text-balance text-black sm:text-7xl">NFTs Redefine Value</h1>
+            <p class="mt-8 text-xl font-medium text-pretty text-gray-400 sm:text-xl/8">Join Early or Watch the Future Pass You By</p>
+            <div class="mt-10 mb-16 flex items-center justify-center gap-x-6">
+                <a href="{% url 'signup' %}" class="rounded-full border border-gray-200 hover:text-white shadow-violet-400 shadow-2xl hover:bg-violet-900 transition duration-500 px-10 py-3 font-semibold" >Get started</a>
+                <a href="{% url 'index' %}#mission" class="rounded-full bg-zinc-700 text-white shadow-zinc-400 shadow-2xl hover:bg-zinc-900 hover:shadow-zinc-700 transition duration-500 px-10 py-3 font-semibold">Learn more</a>
+            </div>
+        </div>
+    <a class="mt-16">.</a>
+    </div>
+    <div class="flex flex-col items-center justify-content-center p-4 bg-gray-200">
+        <div class="flex flex-wrap items-center justify-center p-10">
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-yellow-300 via-amber-500 to-orange-600 mt-4 mb-3">Welcome to New Era of Digital Art</h1>
+            <p class="text-xl text-center text-black">Step into a world where every digital creation is handpicked for its uniqueness and artistic excellence. Our marketplace isn't just another platform—it's a sanctuary for the truly exceptional.</p>
+            <div class="mt-10 mb-16 flex flex-row items-center justify-center gap-x-6">
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white px-4 py-12 w-60 h-60 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Latest News</h1>
+                    <p class="text-black">Powered by Polygon blockchain for instant transactions</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white px-4 py-12 w-60 h-60 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Secure & Safe</h1>
+                    <p class="text-black">Bank-grade security with blockchain transparency</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white  px-4 py-12 w-60 h-60 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Curated Excellence</h1>
+                    <p class="text-black">Only the finest NFTs pass our selection process</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white px-4 py-12 w-60 h-60 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Vibrant Community</h1>
+                    <p class="text-black">Join creators and collectors shaping the future</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-content-center p-4 bg-zinc-900">
+        <div class="flex flex-wrap flex-row gap-3 items-center justify-center p-10 max-w-screen">
+            <div class="flex flex-col items-center justify-center gap-x-6">
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold text-white">Powered by Polygon</h1>
+                    <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-violet-500 to-purple-600">Designed for You</h1>
+                    <p class="text-lg text-white mb-8 leading-relaxed max-w-xl">
+                        Seamlessly harnessing the power of Polygon's blockchain, we deliver speed and security without compromise. Experience effortless transactions that feel as natural as owning art itself.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-x-6">
+                {% load static %}
+                <img src="{% static 'images/photo-1.jpg' %}" alt="" class="relative rounded-3xl max-w-xl max-h-2xl p-3 hover:rotate-3 transition duration-500">
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-content-center p-4 bg-gray-100">
+        <div class="flex flex-wrap flex-row gap-8 items-center justify-center p-10 max-w-screen">
+            <div class="flex flex-col items-center justify-center gap-x-6">
+                {% load static %}
+                <img src="{% static 'images/photo-2.jpg' %}" alt="" class="relative rounded-3xl max-w-xl max-h-2xl p-3 shadow-2xl mr-4 hover:rotate-3 transition duration-500">
+            </div>
+            <div class="flex flex-col items-center justify-center gap-x-6">
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold text-black">Curated for the</h1>
+                    <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-yellow-300 via-amber-500 to-orange-600">Discerning Collector</h1>
+                    <p class="text-lg text-black mb-8 leading-relaxed max-w-xl">
+                    Here, exclusivity is not an afterthought—it's the essence. Each NFT will be passed through a meticulous selection process, ensuring that only the finest meet your gaze and your collection.
+                    </p>
+                    <div class="flex flex-row items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check mb-1.5 mr-1"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <a class="text-xl font-semibold mb-2">Handpicked by expert curators</a>
+                    </div>
+                    <div class="flex flex-row items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check mb-1.5 mr-1"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <a class="text-xl font-semibold mb-2">Verified authenticity guaranteed</a>
+                    </div>
+                    <div class="flex flex-row items-start ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-icon lucide-circle-check mb-1.5 mr-1"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <a class="text-xl font-semibold mb-2">Premium quality standards</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-linear-to-br from-slate-900 to-zinc-900">
+    <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+        <div class="flex flex-col items-center justify-center gap-x-6 mb-4">
+            <h1 class="text-3xl font-bold text-white">A Centralized Touch with</h1>
+            <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-green-100 via-teal-400 to-teal-800">Blockchain Integrity</h1>
+        </div>
+        <p class="text-xl max-w-xl font-medium text-white">Enjoy the best of both worlds—the trust and transparency of blockchain wrapped in a streamlined, intuitive experience curated just for you. Collect, trade, and showcase with confidence and ease.</p>
+    </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-gray-200">
+    <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+        <div class="flex flex-col items-center justify-center gap-x-6 mb-4">
+            <div class="flex flex-row">
+                <h1 class="text-3xl font-bold text-black mr-2">Join Us in Shaping</h1>
+                <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-pink-300 via-indigo-700 to-purple-800">Tomorrow's Legacy</h1>
+            </div>
+        </div>
+        <p class="text-xl max-w-2xl text-slate-800 font-medium">This is more than a marketplace. It's a vibrant gallery, a dynamic community, and a future where art and innovation come alive. Your journey to owning exclusive digital masterpieces starts here.</p>
+        <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl">
+
+            {% load static %}
+            <img src="{% static 'images/photo-4.jpg' %}"
+                 class="w-full h-96 object-cover blur-2xl"
+                 alt="Community Background">
+
+            <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <a href="https://discord.com/channels/1398288199616565268/1398384497044623488"
+                   class="bg-zinc-900 text-white px-8 py-6 text-lg rounded-full font-semibold shadow-2xl shadow-black transition-all duration-500 hover:bg-white hover:text-slate-900">
+                    Join the Community
+                </a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-linear-to-br from-slate-900 to-zinc-900">
+    <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+        <div class="flex flex-col items-center justify-center gap-x-6 mb-4">
+            <h1 class="text-3xl font-bold text-white">The Journey Has Begun—</h1>
+            <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">And You're Invited</h1>
+        </div>
+        <p class="text-xl max-w-xl font-medium text-white">Enjoy the best of both worlds—the trust and transparency of blockchain wrapped in a streamlined, intuitive experience curated just for you. Collect, trade, and showcase with confidence and ease.</p>
+    </div>
+    </div>
+    <section id="early_access_cta_section" class="relative py-32 bg-zinc-950 flex flex-wrap">
+        <div class="absolute inset-0">
+            {% load static %}
+            <img src="{% static 'images/photo-celestial.jpg' %}" alt="" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-linear-to-b from-slate-950 via-transparent to-slate-950"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">
+            Be First in Line for the
+            <span class="bg-linear-to-r from-yellow-300 via-amber-500 to-orange-600 bg-clip-text text-transparent">
+              Future
+            </span>
+          </h2>
+          <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Greatness takes time, and we're dedicated to delivering an experience that exceeds expectations.
+            While we put the finishing touches on this exclusive space, you have a special opportunity to join us early.
+          </p>
+          <a href="{% url 'signup' %}" class="bg-zinc-800 text-white px-12 py-7 text-xl rounded-full font-bold shadow-2xl shadow-black transition-all duration-500 hover:shadow-3xl hover:text-slate-900 hover:bg-white items-center text-center justify-items-center flex flex-wrap"
+          >
+            Get VIP Access Now
+          </a>
+        </div>
+      </section>
+      <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-linear-to-br from-slate-900 to-zinc-900">
+        <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+            <div class="flex flex-row items-center justify-center gap-x-4 mb-4">
+                <h1 class="text-3xl font-bold text-white">Stay Connected</h1>
+                <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">Stay Exclusive.—</h1>
+            </div>
+            <p class="text-xl max-w-xl font-medium text-white">Enjoy the best of both worlds—the trust and transparency of blockchain wrapped in a streamlined, intuitive experience curated just for you. Collect, trade, and showcase with confidence and ease.</p>
+        </div>
+    </div>
+    <div id="mission" class="flex flex-col items-center justify-content-center p-4 bg-gray-100">
+        <div class="flex flex-wrap flex-row gap-3 items-center justify-center p-10 max-w-screen">
+            <div class="flex flex-col items-center justify-center gap-x-6 gap-y-5">
+                <div class="flex flex-row gap-2">
+                    <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">Our</h1>
+                    <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-yellow-300 via-amber-500 to-orange-600">Mission</h1>
+                </div>
+                <p class="text-lg text-slate-900 font-medium mb-8 leading-relaxed max-w-xl">
+                        Seamlessly harnessing the power of Polygon's blockchain, we deliver speed and security without compromise. Experience effortless transactions that feel as natural as owning art itself.
+                    </p>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-x-6">
+                {% load static %}
+                <img src="{% static 'images/cele_back.png' %}" alt="" class="relative rounded-3xl max-w-xl max-h-2xl p-3 hover:rotate-3 transition duration-500">
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-linear-to-br from-slate-900 to-zinc-900">
+    <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+        <div class="flex flex-col items-center justify-center gap-x-6 mb-4">
+            <h1 class="text-6xl font-bold bg-clip-text text-transparent bg-linear-to-r from-yellow-300 via-amber-500 to-orange-600">Community and Safety</h1>
+            <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">Creativity, Confidence, Community</h1>
+        </div>
+        <p class="text-xl max-w-xl font-medium bg-clip-text text-transparent bg-linear-to-l from-green-100 via-teal-400 to-teal-800">Enjoy the best of both worlds—the trust and transparency of blockchain wrapped in a streamlined, intuitive experience curated just for you. Collect, trade, and showcase with confidence and ease.</p>
+        <p class="text-xl max-w-xl font-medium text-white">This isn't just about art. It's about what's possible—collecting, connecting, unlocking new forms of expression and belonging. Early signup means never missing out on tomorrow's legacy.</p>
+        <div class="mt-10 mb-16 flex flex-row items-center justify-center gap-x-6">
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white px-4 py-12 w-60 h-60 bg-linear-to-tr/increasing from-indigo-300 via-violet-500 to-purple-600 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Secure Platform</h1>
+                    <p class="text-white font-medium">Powered by Polygon blockchain for instant transactions</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white px-4 py-12 w-60 h-60 bg-linear-to-t/hsl from-green-100 via-teal-400 to-teal-800 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-white mt-4 mb-3">Privacy First</h1>
+                    <p class="text-black font-medium">Bank-grade security with blockchain transparency</p>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-x-6 rounded-2xl shadow-2xl bg-white  px-4 py-12 w-60 h-60 bg-linear-to-bl/hsl from-yellow-300 via-amber-500 to-orange-600 hover:rotate-5 transition duration-500">
+                    <h1 class="text-4xl font-bold text-black mt-4 mb-3">Safe Community</h1>
+                    <p class="text-white font-medium">Only the finest NFTs pass our selection process</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-x-6 p-4 bg-linear-to-br from-slate-900 to-zinc-900">
+    <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+        <div class="flex flex-col items-center justify-center gap-x-6 mb-4">
+            <h1 class="text-5xl font-bold text-white">Don't Just Watch—</h1>
+            <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-green-100 via-teal-400 to-teal-800">Own the Future</h1>
+        </div>
+        <p class="text-xl max-w-xl font-medium text-white">Stay close: the marketplace is being crafted behind the scenes, and those who sign up now will be the first to shape and explore what's next.</p>
+        <a href="{% url 'signup' %}" class="bg-zinc-800 text-white px-12 py-7 text-xl rounded-full font-bold shadow-2xl shadow-black transition-all duration-500 hover:shadow-3xl hover:text-slate-900 hover:bg-white items-center text-center justify-items-center flex flex-wrap"
+          >
+            Join Waitlist Now
+          </a>
+        <p class="text-lg max-w-xl font-light text-white mt-4">Together, We're Building More Than a Marketplace
+            We're creating a legacy—a realm where rarity meets ease, where curated excellence thrives, and where you belong.</p>
+    </div>
+    </div>
+    <div id="faqs" class="flex flex-col items-center justify-center gap-x-6 p-4 bg-gray-100">
+        <div class="flex flex-col items-center justify-center gap-x-6 gap-y-3 my-24 max-h-2xl">
+            <div class="flex flex-row items-center justify-center gap-x-4 mb-4">
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-yellow-300 via-amber-500 to-orange-600">Frequently</h1>
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-l from-pink-300 via-indigo-700 to-purple-800">Asked</h1>
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-linear-to-tl from-pink-300 via-indigo-700 to-purple-800">Questions</h1>
+            </div>
+            <p class="text-xl max-w-xl font-medium text-black mb-6">Everything you need to know about CelestialE</p>
+
+            <div class="w-full max-w-2xl mx-auto">
+                {% for item in faqs %}
+                <div class="border border-zinc-800 rounded-2xl bg-zinc-900 overflow-hidden shadow-2xl shadow-black mb-8">
+                    <button class="accordion-button flex justify-between items-center w-full p-6 text-left transition-all duration-300 hover:bg-zinc-800/50">
+                        <span class="text-xl font-semibold text-white">{{ item.q }}</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+
+                    <div class="panel max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-zinc-900">
+                        <div class="px-6 pb-6 text-slate-400 border-t border-zinc-800/50 font-medium pt-4 leading-relaxed">
+                            {{ item.a }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".accordion-button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const panel = this.nextElementSibling;
+            const icon = this.querySelector('svg');
+
+            // 1. Toggle the icon rotation
+            icon.classList.toggle('rotate-180');
+
+            // 2. Toggle the panel height
+            if (panel.style.maxHeight) {
+                // If it's open, close it
+                panel.style.maxHeight = null;
+            } else {
+                // If it's closed, set height to exactly what the content needs
+                // Adding a little extra padding room if needed
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+
+            // Optional: Close other panels when one opens (Solo Accordion)
+            /*
+            buttons.forEach(otherBtn => {
+                if (otherBtn !== button) {
+                    otherBtn.nextElementSibling.style.maxHeight = null;
+                    otherBtn.querySelector('svg').classList.remove('rotate-180');
+                }
+            });
+            */
+        });
+    });
+});
+</script>
+{% endblock %}
