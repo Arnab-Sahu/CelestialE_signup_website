@@ -135,7 +135,7 @@ def signup_view(request):
         try:
             # Check if username exists
             if db.collection('users').document(email).get().exists:
-                messages.warning(request, "This identity has already been claimed.")
+                messages.warning(request, "This email is already registered.")
                 return render(request, "signup.html")
 
             # Save to Firestore
@@ -152,4 +152,5 @@ def signup_view(request):
             print(f"Error: {e}")
             messages.error(request, "Celestial connection failed. Check your console.")
             return render(request, "signup.html")
+
     return render(request, "signup.html")
